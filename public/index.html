@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>API creation</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/cosmo/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+
+
+
+    <div id="app" clas="clearfix"></div>
+    <script type="text/javascript" src="./all.js"></script> <!-- Get page content -->
+
+
+    <script type="text/javascript">
+// 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1539834490.26
+!function(n,t,c,e,u){function r(n){try{f=n(u)}catch(n){return h=n,void i(p,n)}i(s,f)}function i(n,t){for(var c=0;c<n.length;c++)d(n[c],t);
+}function o(n,t){return n&&(f?d(n,f):s.push(n)),t&&(h?d(t,h):p.push(t)),l}function a(n){return o(!1,n)}function d(t,c){
+n.setTimeout(function(){t(c)},0)}var f,h,s=[],p=[],l={then:o,catch:a,_setup:r};n[e]=l;var v=t.createElement("script");
+v.src=c,v.async=!0,v.id="_uasdk",v.rel=e,t.head.appendChild(v)}(window,document,'https://web-sdk.urbanairship.com/notify/v1/ua-sdk.min.js',
+  'UA', {
+    vapidPublicKey: 'BFPGtY0eTGsbRmm2BiJ2QkanKj6p-t1vrCF6qkgPbEiP3QoKimwoJOcFLtKotG-mo6x_wHEIKfdLw4ms0aJp9iM=',
+    appKey: 'WYDed--yTuqh-1N9iBzJ-A',
+    token: 'MTpXWURlZC0teVR1cWgtMU45aUJ6Si1BOllRTlllNHVsQXc0bWZBNDNHc20wblRPeGp6VHFKSHJwam8wN2lwZFplNVk'
+  });
+
+
+  UA.then(function(sdk) {
+  console.log(sdk.channel.id)
+}).catch(function(err) {
+  console.log(err)
+})
+
+// Multiple calls have no additional expense.
+UA.then(function(sdk) {
+  $('#register').show()
+  $('#register').click(function(ev) { sdk.register() })
+})
+
+</script>
+
+  </body>
+</html>
